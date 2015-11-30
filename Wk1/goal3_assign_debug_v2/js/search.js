@@ -14,19 +14,19 @@ Analyze Buggy search
 	;
 
 	// Validates search query
-	var validqte == function(query){ 
+	var validqte == function(query){
 
 		// Trim whitespace from start and end of search query
-		while(query.charAt(0) = " "){
-			query = query.substring(1, query.length);
+		while(query.charAt(0) = " "){ //Check if the first charecter of the search is empty
+			query = query.substring(1, query.length); // IF it is empty start the search term at the next charecter
 		};
-		while(query.charAt(query.length-1) === ""){
-			query = query.substring(0, query.length-1);
+		while(query.charAt(query.length-1) === ""){ // Check if the last charecter is empty
+			query = query.substring(0, query.length-1); // If the last charecter is empty set the query to length minus one
 		;
 
 		// Check search length, must have 3 characters
-		if(query.length < 3){
-			alert("Your search query is too small, try again.);
+		if(query.length < 3){ // Check if query length is less than 3 charecters
+			alert("Your search query is too small, try again.); // Alert that query is too small if under 3 charecters
 
 			// (DO NOT FIX THE LINE DIRECTLY BELOW)
 			searchInput.focus();
