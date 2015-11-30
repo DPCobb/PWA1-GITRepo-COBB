@@ -43,16 +43,17 @@
             console.log(playerOneName+": "+playerOneHealth + " " + playerTwoName+":"+playerTwoHealth);  //log the players new health level
 
             //check for victor
-            var result = winnerCheck();
-            console.log(result);
-            if (result==="no winner")
+            var result = winnerCheck(); //Set results equal to result of winnerCheck
+            console.log(result);    //Log winner results
+            if (result==="no winner") //IF there is no winner then...
             {
-                round++;
+                round++; //Add one to the total rounds
+                // ALERT players of new health and round number
                 alert(playerOneName+":"+playerOneHealth+"  *ROUND "+round+" OVER"+"*  "+playerTwoName+":"+playerTwoHealth);
 
-            } else{
-                alert(result);
-                break;
+            } else{ //If their is a result...
+                alert(result); //ALERT winner message
+                break; //End round counter
             };
 
           };
