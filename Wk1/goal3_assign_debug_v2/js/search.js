@@ -78,45 +78,45 @@ Analyze Buggy search
 	};
 
 	// Put "No Results" message into page (DO NOT FIX THE HTML VAR NOR THE innerHTML)
-	var noMatch = function(){
+	var noMatch = function(){ // Set no match message to variable
 		var html = ''+
 			'<p>No Results found.</p>'+
 			'<p style="font-size:10px;">Try searching for "JavaScript".  Just an idea.</p>'
 		;
-		resultsDIV.innerHTML = html;
+		resultsDIV.innerHTML = html; // Display no match message in results division
 	};
 
 	// Put matches into page as paragraphs with anchors
-	var showMatches = function(results){
+	var showMatches = function(results){ // Set function to display query matches
 
 		// THE NEXT 4 LINES ARE CORRECT.
-		var html = '<p>Results</p>',
+		var html = '<p>Results</p>', // Results variable for showing results
 			title,
 			url
 		;
 
 		// loop through all the results search() function
-		for(var i=0, j=results.length; i<j; i++){
+		for(var i=0, j=results.length; i<j; i++){ // Define loop for results
 
 			// title of video ends with pipe
 			// pull the title's string using index numbers
-			titleEnd = results[i].indexOf('|');
-			title = results[i].subString(0, titleEnd);
+			titleEnd = results[i].indexOf('|'); //Define the end of the title
+			title = results[i].subString(0, titleEnd); // Define the entire title from 0 to end of title
 
 			// pull the video url after the title
-			url = results[i].substring(results[i].indexOf('|')+1, results[i].length);
+			url = results[i].substring(results[i].indexOf('|')+1, results[i].length); // Get url of result from end of title to end of string
 
 			// make the video link - THE NEXT LINE IS CORRECT.
-			html += '<p><a href=' + url + '>' + title + '</a></p>';
+			html += '<p><a href=' + url + '>' + title + '</a></p>'; // Define video link
 		};
-		resultsDIV.innerHTML = html; //THIS LINE IS CORRECT.
+		resultsDIV.innerHTML = html; //THIS LINE IS CORRECT. // Display result in result division
 	};
 
 	// The onsubmit event will be reviewed in upcoming Course Material.
 	// THE LINE DIRECTLY BELOW IS CORRECT
-	document.forms[0].onsubmit = function(){
-		var query = searchInput.value;
-		validqte(query);
+	document.forms[0].onsubmit = function(){ // Set event for query submit
+		var query = searchInput.value; //Set query to the value of search bar
+		validqte(query); // send the search to be validated
 
         // return false is needed for most events - this will be reviewed in upcoming course material
         // THE LINE DIRECTLY BELOW IS CORRECT
