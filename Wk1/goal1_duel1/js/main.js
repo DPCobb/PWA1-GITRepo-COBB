@@ -60,17 +60,17 @@
     };
 
     function winnerCheck(){
-        var result="no winner";
-        if (playerOneHealth<1 && playerTwoHealth<1)
+        var result="no winner"; // Set result to no winner
+        if (playerOneHealth<1 && playerTwoHealth<1) //Are both players health less than 1?
         {
-            result = "You Both Die";
-        } else if(playerOneHealth<1){
-            result =playerTwoName+" WINS!!!"
-        } else if (playerTwoHealth<1)
+            result = "You Both Die"; // Set result to you both die
+        } else if(playerOneHealth<1){ // IF just player 1 has health less than 1
+            result =playerTwoName+" WINS!!!" // Result is set to player two winning
+        } else if (playerTwoHealth<1) // If player 2 has health less than 1
         {
-            result = playerOneName+" WINS!!!"
+            result = playerOneName+" WINS!!!" // Result is set to player one winning
         };
-       return result;
+       return result; //Return the value of result
     };
 
     /*******  The program gets started below *******/
