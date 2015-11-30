@@ -56,24 +56,24 @@ Analyze Buggy search
 			// loop through the user's search query words
 			// save a lowercase variable of the search keyword
 			for(var ii=0, jj=queryArray.length; ii<jj; ii++){ // Change query to all lowercase letters
-				var qitem = queryArray[ii].tolowercase();	// Save lowercase letters to new var
+				var qitem = queryArray[ii].tolowercase();	// Save lowercase query to new var
 
 				// is the keyword anywhere in the video title?
 				// If a match is found, push full db[i] into results array
-				var compare = dbitem.indexOf(qitem);
+				var compare = dbitem.indexOf(qitem); // Search for match in database from query
 				if(compare !== -1){
-					results.push(db[i]);
+					results.push(db[i]); // If match does not equal -1 add database index to results
 				};
 			;
 		;
 
-		results.sort();
+		results.sort(); //Sort all of the results from query and database match
 
 		// Check that matches were found, and run output functions
-		if(results.length = 0){
-			noMatch();
-		}else{
-			showMatches(results);
+		if(results.length = 0){ //Check to see if there are results from query
+			noMatch(); // if no results show no match
+		}else{ // If there are results show the matches
+			showMatches(results); // Send results to function to show matches
 		};
 	};
 
