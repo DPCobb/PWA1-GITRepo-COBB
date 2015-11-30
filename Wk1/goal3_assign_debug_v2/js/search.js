@@ -29,34 +29,34 @@ Analyze Buggy search
 			alert("Your search query is too small, try again.); // Alert that query is too small if under 3 charecters
 
 			// (DO NOT FIX THE LINE DIRECTLY BELOW)
-			searchInput.focus();
+			searchInput.focus(); // Focus on input form for query
 			return;
 		};
 
-		search(query);
+		search(query); // Pass the search query into search function
 	};
 
 	// Finds search matches
 	var search = function(query)
 
 		// split the user's search query string into an array
-		var queryArray = query.join(" ");
+		var queryArray = query.join(" "); // Set search query into an array
 
 		// array to store matched results from database.js
-		var results = [];
+		var results = []; // Set up empty result value
 
 		// loop through each index of db array
-		for(var i=0, j=db.length; i<j; i++){
+		for(var i=0, j=db.length; i<j; i++){ // Set loop: i to 0, j to length of database, if i is less than j add one to i
 
 			// each db[i] is a single video item, each title ends with a pipe "|"
 			// save a lowercase variable of the video title
-			var dbTitleEnd = db[i].indexOf('|');
-			var dbitem = db[i].tolowercase().substring(0, dbTitleEnd);
+			var dbTitleEnd = db[i].indexOf('|'); // Set the end of the title for each database entry
+			var dbitem = db[i].tolowercase().substring(0, dbTitleEnd); // Change title to all lowercase letters
 
 			// loop through the user's search query words
 			// save a lowercase variable of the search keyword
-			for(var ii=0, jj=queryArray.length; ii<jj; ii++){
-				var qitem = queryArray[ii].tolowercase();
+			for(var ii=0, jj=queryArray.length; ii<jj; ii++){ // Change query to all lowercase letters
+				var qitem = queryArray[ii].tolowercase();	// Save lowercase letters to new var
 
 				// is the keyword anywhere in the video title?
 				// If a match is found, push full db[i] into results array
