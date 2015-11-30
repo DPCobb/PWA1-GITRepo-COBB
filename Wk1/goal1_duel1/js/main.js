@@ -23,23 +23,24 @@
     var playerTwoHealth = 100;
 
     //initiate round
-    var round=0;
+    var round=0; //Set the round number to 0
 
-    function fight(){
+    function fight(){   //Start the FUNCTION fight()
+        //ALERT players of their name, health, and display the start option
         alert(playerOneName+":"+playerOneHealth+"  *START*  "+playerTwoName+":"+playerTwoHealth);
-        for (var i = 0; i < 10; i++)
+        for (var i = 0; i < 10; i++) // i is equal to zero and if i is less than ten than add 1
         {
             //random formula is - Math.floor(Math.random() * (max - min) + min);
-            var minDamage1 = player1Damage * .5;
+            var minDamage1 = player1Damage * .5; // Compute damage dealt to players
             var minDamage2 = player2Damage * .5;
-            var f1 = Math.floor(Math.random()*(player1Damage-minDamage1)+minDamage1);
+            var f1 = Math.floor(Math.random()*(player1Damage-minDamage1)+minDamage1); // Set the amount of damage done to each player
             var f2 = Math.floor(Math.random()*(player2Damage-minDamage2)+minDamage2);
 
             //inflict damage
-            playerOneHealth-=f1;
+            playerOneHealth-=f1; //Set players new health to health minus damage
             playerTwoHealth-=f2;
 
-            console.log(playerOneName+": "+playerOneHealth + " " + playerTwoName+":"+playerTwoHealth);
+            console.log(playerOneName+": "+playerOneHealth + " " + playerTwoName+":"+playerTwoHealth);  //log the players new health level
 
             //check for victor
             var result = winnerCheck();
