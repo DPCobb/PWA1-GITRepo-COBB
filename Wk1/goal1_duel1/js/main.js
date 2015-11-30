@@ -1,9 +1,8 @@
-/**
- * Duel Fight Game - FINISHED
- * Date: 4/09/13
-
- Assignment 1
- Part 1/3 of series
+/*  Daniel Cobb
+    11/30/2015
+    Analyze Duel #1
+    Duel Fight Game - FINISHED
+    Date: 4/09/13
 */
 
 // self-executing function
