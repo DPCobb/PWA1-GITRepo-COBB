@@ -18,14 +18,14 @@ Analyze Buggy search
 
 		// Trim whitespace from start and end of search query
 		while(query.charAt(0) = " "){ //Check if the first character of the search is empty
-			query = query.substring(1, query.length); // IF it is empty start the search term at the next charecter
+			query = query.substring(1, query.length); // IF it is empty start the search term at the next character
 		};
-		while(query.charAt(query.length-1) === ""){ // Check if the last charecter is empty
+		while(query.charAt(query.length-1) === ""){ // Check if the last character is empty
 			query = query.substring(0, query.length-1); // If the last character is empty set the query to length minus one
 		;
 
 		// Check search length, must have 3 characters
-		if(query.length < 3){ // Check if query length is less than 3 charecters
+		if(query.length < 3){ // Check if query length is less than 3 characters
 			alert("Your search query is too small, try again.); // Alert that query is too small if under 3 characters
 
 			// (DO NOT FIX THE LINE DIRECTLY BELOW)
