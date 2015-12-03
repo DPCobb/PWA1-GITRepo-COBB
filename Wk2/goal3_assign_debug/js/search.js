@@ -14,7 +14,7 @@ Analyze Buggy search
 	;
 
 	// Validates search query
-	var validqte == function(query){
+	var validqte = function(query){
 
 		// Trim whitespace from start and end of search query
 		while(query.charAt(0) = " "){ //Check if the first character of the search is empty
@@ -26,7 +26,7 @@ Analyze Buggy search
 
 		// Check search length, must have 3 characters
 		if(query.length < 3){ // Check if query length is less than 3 characters
-			alert("Your search query is too small, try again.); // Alert that query is too small if under 3 characters
+			alert("Your search query is too small, try again."); // Alert that query is too small if under 3 characters
 
 			// (DO NOT FIX THE LINE DIRECTLY BELOW)
 			searchInput.focus(); // Focus on input form for query
@@ -37,7 +37,7 @@ Analyze Buggy search
 	};
 
 	// Finds search matches
-	var search = function(query)
+	var search = function(query);
 
 		// split the user's search query string into an array
 		var queryArray = query.join(" "); // Set search query into an array
