@@ -22,7 +22,7 @@ Analyze Buggy search
 		};
 		while(query.charAt(query.length-1) === ""){ // Check if the last character is empty
 			query = query.substring(0, query.length-1); // If the last character is empty set the query to length minus one
-		;
+		};
 
 		// Check search length, must have 3 characters
 		if(query.length < 3){ // Check if query length is less than 3 characters
@@ -64,8 +64,8 @@ Analyze Buggy search
 				if(compare !== -1){
 					results.push(db[i]); // If match does not equal -1 add database index to results
 				};
-			;
-		;
+			};
+		};
 
 		results.sort(); //Sort all of the results from query and database match
 
@@ -121,6 +121,5 @@ Analyze Buggy search
         // return false is needed for most events - this will be reviewed in upcoming course material
         // THE LINE DIRECTLY BELOW IS CORRECT
 		return false;
-	;
-
-})();
+	};
+})
