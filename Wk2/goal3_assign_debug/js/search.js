@@ -6,24 +6,21 @@ Analyze Buggy search
 
 // Create privatized scope using a self-executing function
 (function(){
-
 	// Variable initialization (DO NOT FIX ANY OF THE BELOW VAR's)
 	var resultsDIV = document.getElementById("results"), // Set the division to show search results
 		searchInput = document.forms[0].search,	// Set the location of the search input
-		currentSearch = ''	// Set the current search to nothing
-	;
+		currentSearch = '';	// Set the current search to nothing
 
 	// Validates search query
 	var validqte = function(query){
 
 		// Trim whitespace from start and end of search query
-		while(query.charAt(0) = " "){ //Check if the first character of the search is empty
+		while(query.charAt(0) == " "){ //Check if the first character of the search is empty
 			query = query.substring(1, query.length); // IF it is empty start the search term at the next character
-		};
-		while(query.charAt(query.length-1) === ""){ // Check if the last character is empty
+		}
+		while(query.charAt(query.length-1) == ""){ // Check if the last character is empty
 			query = query.substring(0, query.length-1); // If the last character is empty set the query to length minus one
-		};
-
+		}
 		// Check search length, must have 3 characters
 		if(query.length < 3){ // Check if query length is less than 3 characters
 			alert("Your search query is too small, try again."); // Alert that query is too small if under 3 characters
@@ -31,10 +28,9 @@ Analyze Buggy search
 			// (DO NOT FIX THE LINE DIRECTLY BELOW)
 			searchInput.focus(); // Focus on input form for query
 			return;
-		};
-
+		}
 		search(query); // Pass the search query into search function
-	};
+	}
 
 	// Finds search matches
 	var search = function(query){
@@ -117,9 +113,8 @@ Analyze Buggy search
 	document.forms[0].onsubmit = function(){ // Set event for query submit
 		var query = searchInput.value; //Set query to the value of search bar
 		validqte(query); // send the search to be validated
-
         // return false is needed for most events - this will be reviewed in upcoming course material
         // THE LINE DIRECTLY BELOW IS CORRECT
 		return false;
 	};
-})
+})();
