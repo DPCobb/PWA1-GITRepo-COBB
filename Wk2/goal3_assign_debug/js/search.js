@@ -15,10 +15,10 @@ Analyze Buggy search
 	var validqte = function(query){
 
 		// Trim whitespace from start and end of search query
-		while(query.charAt(0) == " "){ //Check if the first character of the search is empty
+		while(query.charAt(0) === " "){ //Check if the first character of the search is empty
 			query = query.substring(1, query.length); // IF it is empty start the search term at the next character
 		}
-		while(query.charAt(query.length-1) == ""){ // Check if the last character is empty
+		while(query.charAt(query.length-1) === " "){ // Check if the last character is empty
 			query = query.substring(0, query.length-1); // If the last character is empty set the query to length minus one
 		}
 		// Check search length, must have 3 characters
@@ -34,9 +34,10 @@ Analyze Buggy search
 
 	// Finds search matches
 	var search = function(query){
-
+		var queryArray = [];
+		queryArray.push(query);
 		// split the user's search query string into an array
-		var queryArray = query.join(" "); // Set search query into an array
+		queryArray.join(" "); // Set search query into an array
 
 		// array to store matched results from database.js
 		var results = []; // Set up empty result value
@@ -47,26 +48,25 @@ Analyze Buggy search
 			// each db[i] is a single video item, each title ends with a pipe "|"
 			// save a lowercase variable of the video title
 			var dbTitleEnd = db[i].indexOf('|'); // Set the end of the title for each database entry
-			var dbitem = db[i].tolowercase().substring(0, dbTitleEnd); // Change title to all lowercase letters
+			var dbitem = db[i].toLowerCase().substring(0, dbTitleEnd); // Change title to all lowercase letters
 
 			// loop through the user's search query words
 			// save a lowercase variable of the search keyword
 			for(var ii=0, jj=queryArray.length; ii<jj; ii++){ // Change query to all lowercase letters
-				var qitem = queryArray[ii].tolowercase();	// Save lowercase query to new var
+				var qitem = queryArray[ii].toLowerCase();	// Save lowercase query to new var
 
 				// is the keyword anywhere in the video title?
 				// If a match is found, push full db[i] into results array
 				var compare = dbitem.indexOf(qitem); // Search for match in database from query
 				if(compare !== -1){
 					results.push(db[i]); // If match does not equal -1 add database index to results
-				};
-			};
-		};
+				}
+			}
+		}
 
 		results.sort(); //Sort all of the results from query and database match
-
 		// Check that matches were found, and run output functions
-		if(results.length = 0){ //Check to see if there are results from query
+		if(results.length == 0){ //Check to see if there are results from query
 			noMatch(); // if no results show no match
 		}else{ // If there are results show the matches
 			showMatches(results); // Send results to function to show matches
@@ -96,8 +96,8 @@ Analyze Buggy search
 
 			// title of video ends with pipe
 			// pull the title's string using index numbers
-			titleEnd = results[i].indexOf('|'); //Define the end of the title
-			title = results[i].subString(0, titleEnd); // Define the entire title from 0 to end of title
+			var titleEnd = results[i].indexOf('|'); //Define the end of the title
+			title = results[i].substring(0, titleEnd); // Define the entire title from 0 to end of title
 
 			// pull the video url after the title
 			url = results[i].substring(results[i].indexOf('|')+1, results[i].length); // Get url of result from end of title to end of string
