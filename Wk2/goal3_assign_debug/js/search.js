@@ -1,7 +1,7 @@
 /*
 Daniel Cobb
-11/30/2015
-Analyze Buggy search
+12/03/2015
+Debug Search
 */
 
 // Create privatized scope using a self-executing function
