@@ -27,20 +27,20 @@
 
     function fight(){   // Start the FUNCTION fight()
         // ALERT players of their name, health, and display the start option
-        alert(playerOneName+":"+playerOneHealth+"  *START*  "+playerTwoName+":"+playerTwoHealth);
+        alert(playerOne[0]+":"+playerOne[2]+"  *START*  "+playerTwo[0]+":"+playerTwo[2]);
         for (var i = 0; i < 10; i++) // i is equal to zero and if i is less than ten than add 1
         {
             //random formula is - Math.floor(Math.random() * (max - min) + min);
-            var minDamage1 = player1Damage * .5; // Compute damage dealt to players
-            var minDamage2 = player2Damage * .5;
-            var f1 = Math.floor(Math.random()*(player1Damage-minDamage1)+minDamage1); // Set the amount of damage done to each player
-            var f2 = Math.floor(Math.random()*(player2Damage-minDamage2)+minDamage2);
+            var minDamage1 = playerOne[1] * .5; // Compute damage dealt to players
+            var minDamage2 = playerTwo[1] * .5;
+            var f1 = Math.floor(Math.random()*(playerOne[1]-minDamage1)+minDamage1); // Set the amount of damage done to each player
+            var f2 = Math.floor(Math.random()*(playerTwo[1]-minDamage2)+minDamage2);
 
             //inflict damage
-            playerOneHealth-=f1; // Set players new health to health minus damage
-            playerTwoHealth-=f2;
+            playerOne[2]-=f1; // Set players new health to health minus damage
+            playerTwo[2]-=f2;
 
-            console.log(playerOneName+": "+playerOneHealth + " " + playerTwoName+":"+playerTwoHealth);  // log the players new health level
+            console.log(playerOne[0]+": "+playerOne[2] + " " + playerTwo[0]+":"+playerTwo[2]);  // log the players new health level
 
             //check for victor
             var result = winnerCheck(); // Set results equal to result of winnerCheck
