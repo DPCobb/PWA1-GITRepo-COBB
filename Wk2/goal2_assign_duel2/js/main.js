@@ -49,7 +49,7 @@
             {
                 round++; // Add one to the total rounds
                 // ALERT players of new health and round number
-                alert(playerOneName+":"+playerOneHealth+"  *ROUND "+round+" OVER"+"*  "+playerTwoName+":"+playerTwoHealth);
+                alert(playerOne[0]+":"+playerOne[2]+"  *ROUND "+round+" OVER"+"*  "+playerTwo[0]+":"+playerTwo[2]);
 
             } else{ // If their is a winner...
                 alert(result); // ALERT winner message
