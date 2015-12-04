@@ -1,6 +1,6 @@
 /*  Daniel Cobb
-    11/30/2015
-    Analyze Duel #1
+    12/04/2015
+    Develop Duel #2
     Duel Fight Game - FINISHED
     Date: 4/09/13
 */
@@ -10,17 +10,17 @@
 
     console.log("FIGHT!!!");
 
-    //player name
-    var playerOneName = "Spiderman";    // Set the first players name to Spiderman
-    var playerTwoName = "Batman";   // Set the second players name to Batman
-
-    //player damage
-    var player1Damage = 20; // Set the maximum damage player one and two can deal per round to 20
-    var player2Damage = 20;
-
-    //player health
-    var playerOneHealth = 100;  // Set both players initial health to 100
-    var playerTwoHealth = 100;
+    //Player one and two: name, damage, health
+    var playerOne = [
+        Name = "Spiderman",
+        Damage = 20,
+        Health = 100
+    ]
+    var playerTwo = [
+        Name = "Batman",
+        Damage = 20,
+        Health = 100
+    ]
 
     //initiate round
     var round=0; // Set the round number to 0
