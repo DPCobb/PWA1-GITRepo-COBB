@@ -11,16 +11,8 @@
     console.log("FIGHT!!!");
 
     //Player one and two: name, damage, health
-    var playerOne = [
-        Name = "Spiderman",
-        Damage = 20,
-        Health = 100
-    ]
-    var playerTwo = [
-        Name = "Batman",
-        Damage = 20,
-        Health = 100
-    ]
+    var playerOne = [ "Spiderman", 20, 100];
+    var playerTwo = ["Batman", 20, 100];
 
     //initiate round
     var round=0; // Set the round number to 0
@@ -40,7 +32,7 @@
             playerOne[2]-=f1; // Set players new health to health minus damage
             playerTwo[2]-=f2;
 
-            console.log(playerOne.Name + ": " + playerOne.Health + " " + playerTwo.Name + ":" + playerTwo.Health);  // log the players new health level
+            console.log(playerOne[0] + ": " + playerOne[2] + " " + playerTwo[0] + ":" + playerTwo[2]);  // log the players new health level
 
             //check for victor
             var result = winnerCheck(); // Set results equal to result of winnerCheck
