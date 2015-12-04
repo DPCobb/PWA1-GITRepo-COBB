@@ -40,7 +40,7 @@
             playerOne[2]-=f1; // Set players new health to health minus damage
             playerTwo[2]-=f2;
 
-            console.log(playerOne.Name+": "+playerOne.Health + " " + playerTwo.Name+":"+playerTwo.Health);  // log the players new health level
+            console.log(playerOne.Name + ": " + playerOne.Health + " " + playerTwo.Name + ":" + playerTwo.Health);  // log the players new health level
 
             //check for victor
             var result = winnerCheck(); // Set results equal to result of winnerCheck
