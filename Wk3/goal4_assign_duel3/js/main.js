@@ -23,9 +23,11 @@
         damage:20,
         health:100
     };
-
+    function btnEvent(){
+        btn.addEventListener("click", fightAction);
+    }
     //Add fight button event listener
-    btn.addEventListener("click", fightAction);
+    window.onload = btnEvent();
 
     function fightAction(){
         fight();
@@ -36,6 +38,9 @@
 
     function fight(){   // Start the FUNCTION fight()
         // ALERT players of their name, health, and display the start option
+        player1.innerHTML = playerOne.name+"  "+playerOne.health;
+        player2.innerHTML = playerTwo.name+"  "+playerTwo.health;
+
         alert(playerOne.name+":"+playerOne.health+"  *START*  "+playerTwo.name+":"+playerTwo.health);
         for (var i = 0; i < 10; i++) // i is equal to zero and if i is less than ten than add 1
         {
@@ -84,5 +89,4 @@
 
     /*******  The program gets started below *******/
     fight();
-
 })();
