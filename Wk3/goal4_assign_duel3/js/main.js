@@ -7,15 +7,20 @@
 (function() {
 
     console.log("FIGHT!!!");
-    //Get html elements and assign variable
+    //Get html elements and assign variables
     var btn = document.getElementById('fightbutton');
     var player1 = document.getElementById('spiderman');
     var player2 = document.getElementById('batman');
     var rnd = document.getElementById('round');
     var score = document.getElementById('scores');
+    //Set styles for score div
     score.style.fontSize = "2em";
     player1.style.float = "left";
     player2.style.float = "right";
+
+    //initiate round
+    // Set round number to 0
+    var round = 0; // Set the round number to 0
 
     //Player one and two objects: name, damage, health
     var playerOne = {
@@ -28,21 +33,18 @@
         damage: 20,
         health: 100
     };
-
+    // Set up butten event to add listener and update score div
     function btnEvent() {
         btn.addEventListener("click", fightAction);
         player1.innerHTML = playerOne.name + "  " + playerOne.health;
         player2.innerHTML = playerTwo.name + "  " + playerTwo.health;
     }
-        //Add fight button event listener
-        window.onload = btnEvent();
-
+    //Add fight button event listener on window load
+    window.onload = btnEvent();
+    // Call fight function on button press
     function fightAction() {
         fight();
     }
-
-    //initiate round
-    var round = 0; // Set the round number to 0
 
     function fight() { // Start the FUNCTION fight()
         var p1 = player1.innerHTML = playerOne.name + "  " + playerOne.health;
