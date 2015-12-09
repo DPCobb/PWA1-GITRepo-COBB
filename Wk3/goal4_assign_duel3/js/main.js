@@ -47,9 +47,6 @@
     }
 
     function fight() { // Start the FUNCTION fight()
-        player1.innerHTML = playerOne.name + "  " + playerOne.health;
-        player2.innerHTML = playerTwo.name + "  " + playerTwo.health;
-
         //random formula is - Math.floor(Math.random() * (max - min) + min);
         var minDamage1 = playerOne.damage * .5; // Compute damage dealt to players
         var minDamage2 = playerTwo.damage * .5;
