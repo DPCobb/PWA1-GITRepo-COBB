@@ -87,6 +87,4 @@
         };
         return result; //Return the value of result
         };
-
-    /*******  The program gets started below *******/
 })();
