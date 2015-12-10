@@ -76,7 +76,7 @@
 
     function winnerCheck() {
         var result = "no winner"; // Set result to no winner
-        if (playerOne.health < 1 && playerTwo.health < 1) // Are both players health less than 1?
+        if (playerOne.health < 1 && playerTwo.health < 1 || round >= 10) // Are both players health less than 1?
         {
             result = "You Both Die"; // Set result to you both die
         } else if (playerOne.health < 1) { // If just player 1 has health less than 1
