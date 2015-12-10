@@ -35,16 +35,12 @@
     };
     // Set up butten event to add listener and update score div
     function btnEvent() {
-        btn.addEventListener("click", fightAction);
-        player1.innerHTML = playerOne.name + "  " + playerOne.health;
+        btn.addEventListener("click", fight); // Add onclick listener to invoke fight()
+        player1.innerHTML = playerOne.name + "  " + playerOne.health; //display updated health stats onclick
         player2.innerHTML = playerTwo.name + "  " + playerTwo.health;
     }
-    //Add fight button event listener on window load
+    //Enable fight button event listener on window load
     window.onload = btnEvent();
-    // Call fight function on button press
-    function fightAction() {
-        fight();
-    }
 
     function fight() { // Start the FUNCTION fight()
         //random formula is - Math.floor(Math.random() * (max - min) + min);
@@ -65,16 +61,16 @@
         if (result === "no winner") // IF there is no winner then...
         {
             round++; // Add one to the total rounds
-            // ALERT players of new health and round number
+            // Display new health and round number
             rnd.innerHTML = "Round " + round;
             player1.innerHTML = playerOne.name + "  " + playerOne.health;
             player2.innerHTML = playerTwo.name + "  " + playerTwo.health;
         } else { // If their is a winner...
-            player1.innerHTML = playerOne.name + "  " + playerOne.health;
-            player2.innerHTML = playerTwo.name + "  " + playerTwo.health;
-            rnd.innerHTML = result; // ALERT winner message
-            btn.removeEventListener("click", fightAction);
-            btn.innerHTML = "Done!";
+            rnd.innerHTML = result; // Display winner message above fight button
+            document.getElementById('scores').innerHTML = result; // Set score div to results
+            document.getElementById('scores').style.textAlign = "center"; // align to center
+            btn.removeEventListener("click", fight); //remove event listener for fight button
+            btn.innerHTML = "Game Over!"; //change fight button text
         };
     };
 
