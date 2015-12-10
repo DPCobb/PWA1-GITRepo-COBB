@@ -30,7 +30,7 @@ Debug Search
 			return;
 		}
 		search(query); // Pass the search query into search function
-	}
+	};
 
 	// Finds search matches
 	var search = function(query){
@@ -66,11 +66,11 @@ Debug Search
 
 		results.sort(); //Sort all of the results from query and database match
 		// Check that matches were found, and run output functions
-		if(results.length == 0){ //Check to see if there are results from query
+		if(results.length === 0){ //Check to see if there are results from query
 			noMatch(); // if no results show no match
 		}else{ // If there are results show the matches
 			showMatches(results); // Send results to function to show matches
-		};
+		}
 	};
 
 	// Put "No Results" message into page (DO NOT FIX THE HTML VAR NOR THE innerHTML)
@@ -104,7 +104,7 @@ Debug Search
 
 			// make the video link - THE NEXT LINE IS CORRECT.
 			html += '<p><a href=' + url + '>' + title + '</a></p>'; // Define video link
-		};
+		}
 		resultsDIV.innerHTML = html; //THIS LINE IS CORRECT. // Display result in result division
 	};
 
