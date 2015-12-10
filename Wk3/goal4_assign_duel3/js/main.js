@@ -71,8 +71,8 @@
             document.getElementById('scores').style.textAlign = "center"; // align to center
             btn.removeEventListener("click", fight); //remove event listener for fight button
             btn.innerHTML = "Game Over!"; //change fight button text
-        };
-    };
+        }
+    }
 
     function winnerCheck() {
         var result = "no winner"; // Set result to no winner
@@ -80,11 +80,11 @@
         {
             result = "You Both Die"; // Set result to you both die
         } else if (playerOne.health < 1) { // If just player 1 has health less than 1
-            result = playerTwo.name + " WINS!!!" // Result is set to player two winning
+            result = playerTwo.name + " WINS!!!"; // Result is set to player two winning
         } else if (playerTwo.health < 1) // If player 2 has health less than 1
         {
-            result = playerOne.name + " WINS!!!" // Result is set to player one winning
-        };
+            result = playerOne.name + " WINS!!!"; // Result is set to player one winning
+        }
         return result; //Return the value of result
-        };
+        }
 })();
