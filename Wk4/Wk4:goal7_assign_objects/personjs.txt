@@ -29,4 +29,4 @@
         action: randomly picked from actions ARRAY
         job: randomly picked from jobs ARRAY
         row: corresponding html row
-    Update FUNCTION
+    Update PROTOTYPE to change action of person
