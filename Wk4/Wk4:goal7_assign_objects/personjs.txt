@@ -1,0 +1,4 @@
+/*  Daniel Cobb
+    12-15-2015
+    Week4 Analyze
+    person.js Pseudo Code */
