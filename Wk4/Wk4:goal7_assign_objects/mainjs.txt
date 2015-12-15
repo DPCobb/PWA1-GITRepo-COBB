@@ -3,9 +3,23 @@
     Week4 Analyze
     main.js Pseudo Code */
 
-    Create an ARRAY for names
+/*  Create an ARRAY for names
     Using a FOR loop to create three new person objects using random names
     Place new objects in person ARRAY
     Verify there are no duplicate names in ARRAY
     Send persons name and job to HTML
-    Monitor for updates using SETINTERVAL
+    Monitor for updates using SETINTERVAL */
+
+    Names Array
+        Sam
+        John
+        Sue
+        Pete
+        Liz
+    FOR LOOP to create 3 Person Objects
+        Select random name from names ARRAY
+        Send name and row to constructor
+        Send to People ARRAY
+    Output to HTML FUNCTION
+        Validate no duplicate names in ARRAY
+    FUNCTION to update information, set on INTERVAL
