@@ -2,3 +2,9 @@
     12-15-2015
     Week4 Analyze
     person.js Pseudo Code */
+
+    Create new OBJECT CONSTRUCTOR for people
+        OBJECT should contain: ARRAY of jobs and actions
+        CONSTRUCTOR should contain: name, job, action, row
+    Create update function for OBJECT
+    Add OBJECT to global window
